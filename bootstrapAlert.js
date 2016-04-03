@@ -56,7 +56,7 @@
              var alertElement = document.createElement('div');
              alertElement.className = config.parentClass;
              alertElement.style = [
-                 'position: absolute;',
+                 'position: fixed;',
                  'width: 90%;',
                  'max-width: 600px;',
                  'left: 50%;',
