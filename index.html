@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>BootstrapAlert by MantaCodeDevs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">BootstrapAlert</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/MantaCodeDevs/bootstrap-alert" class="btn">View on GitHub</a>
+      <a href="https://github.com/MantaCodeDevs/bootstrap-alert/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MantaCodeDevs/bootstrap-alert/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="bootstrap-alert" class="anchor" href="#bootstrap-alert" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bootstrap-alert</h1>
+
+<p>A <a href="http://getbootstrap.com/">Bootstrap</a> addon to display floating alerts.</p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Load the library after you load the bootstrap script file.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jQuery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bootstrap.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bootstrap-alert.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic usage</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">info</span>({
+  title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Getting started!<span class="pl-pds">"</span></span>,
+  message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>See the detailed options below.<span class="pl-pds">"</span></span>
+});</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">warning</span>({
+  title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Bootstrap is required!<span class="pl-pds">"</span></span>,
+  message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>The library depends on Bootstrap and jQuery.<span class="pl-pds">"</span></span>
+});</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">success</span>({
+  title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>All good!<span class="pl-pds">"</span></span>,
+  message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Star the repo if you enjoy it.<span class="pl-pds">"</span></span>
+});</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-c1">alert</span>({
+  title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Something went wrong!<span class="pl-pds">"</span></span>,
+  message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Raise an issue in the issue tracker if you find a bug.<span class="pl-pds">"</span></span>
+});</pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
+
+<p>The following options can be passed to each BootstrapAlert method:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoHide</td>
+<td>boolean</td>
+<td>true</td>
+<td>If <code>true</code> the alert will disappear after the timeout specified in the <code>hideTimeout</code> option</td>
+</tr>
+<tr>
+<td>hideTimeout</td>
+<td>number</td>
+<td>3000</td>
+<td>The timeout used in milliseconds to hide the alert when <code>autoHide</code> is <code>true</code>
+</td>
+</tr>
+<tr>
+<td>dissmissible</td>
+<td>boolean</td>
+<td>false</td>
+<td>Controls whether a close button should be added to the alert</td>
+</tr>
+<tr>
+<td>parentClass</td>
+<td>string</td>
+<td>'bootstrap-alert'</td>
+<td>The class added to the outer HTML element that is created for the alert</td>
+</tr>
+<tr>
+<td>innerClass</td>
+<td>string</td>
+<td>'bootstrap-alert-message'</td>
+<td>The class added to the inner HTML element that contains the alert content</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>''</td>
+<td>The tilte displayed on the alert</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>''</td>
+<td>The message displayed after the <code>title</code> on the alert</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MantaCodeDevs/bootstrap-alert">BootstrapAlert</a> is maintained by <a href="https://github.com/MantaCodeDevs">MantaCodeDevs</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
