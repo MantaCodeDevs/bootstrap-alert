@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>BootstrapAlert by MantaCodeDevs</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">	
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,22 +52,30 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">info</span>({
   title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Getting started!<span class="pl-pds">"</span></span>,
   message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>See the detailed options below.<span class="pl-pds">"</span></span>
-});</pre></div>
+});</pre>
+<button id="info-demo" class="btn btn-primary try-it-btn">Try it</button>
+</div>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">warning</span>({
   title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Bootstrap is required!<span class="pl-pds">"</span></span>,
   message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>The library depends on Bootstrap and jQuery.<span class="pl-pds">"</span></span>
-});</pre></div>
+});</pre>
+<button id="warning-demo" class="btn btn-warning try-it-btn">Try it</button>
+</div>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-en">success</span>({
   title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>All good!<span class="pl-pds">"</span></span>,
   message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Star the repo if you enjoy it.<span class="pl-pds">"</span></span>
-});</pre></div>
+});</pre>
+<button id="success-demo" class="btn btn-success try-it-btn">Try it</button>
+</div>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">BootstrapAlert</span>.<span class="pl-c1">alert</span>({
   title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Something went wrong!<span class="pl-pds">"</span></span>,
   message<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Raise an issue in the issue tracker if you find a bug.<span class="pl-pds">"</span></span>
-});</pre></div>
+});</pre>
+<button id="error-demo" class="btn btn-danger try-it-btn">Try it</button>
+</div>
 
 <h2>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
@@ -140,6 +149,40 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://rawgit.com/MantaCodeDevs/bootstrap-alert/master/bootstrapAlert.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#info-demo").click(function(){
+				BootstrapAlert.info({
+				  title: "Getting started!",
+				  message: "See the detailed options below.",
+				  autoHide: false
+				});
+			});
+			
+			$("#warning-demo").click(function(){
+				BootstrapAlert.warning({
+				  title: "Bootstrap is required!",
+				  message: "The library depends on Bootstrap and jQuery."
+				});
+			});
+			
+			$("#success-demo").click(function(){
+				BootstrapAlert.success({
+				  title: "All good!",
+				  message: "Star the repo if you enjoy it."
+				});
+			});
+			
+			$("#error-demo").click(function(){
+				BootstrapAlert.alert({
+				  title: "Something went wrong!",
+				  message: "Raise an issue in the issue tracker if you find a bug."
+				});
+			});
+		});
+	</script>
   </body>
 </html>

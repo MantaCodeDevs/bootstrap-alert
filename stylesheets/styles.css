@@ -207,10 +207,6 @@ header ul a:active {
   background-color:#f0f0f0;
 }
 
-strong {
-  color:#222;
-  font-weight:700;
-}
 
 header ul li + li + li {
   border-right:none;
@@ -246,6 +242,10 @@ footer {
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+.btn.try-it-btn {
+	margin-bottom: 30px;
 }
 
 @media print, screen and (max-width: 960px) {
